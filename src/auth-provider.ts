@@ -1,5 +1,8 @@
-export default function () {
-    return {
+import { ProviderOptions, SchemeOptions } from '@nuxtjs/auth-next/dist'
+import defu from 'defu'
+
+export default function (_nuxt: any, strategy: ProviderOptions & SchemeOptions) {
+    const defaultStrategy = {
         scheme: 'local',
         user: {
             property: false,
@@ -12,4 +15,6 @@ export default function () {
             global: false,
         },
     }
+
+    Object.assign(strategy, defu(strategy, defaultStrategy))
 }

@@ -30,6 +30,7 @@
     "@nuxtjs/auth-next": "5.0.0-1648802546.c9880dc",
     "@nuxtjs/axios": "^5.13.6",
     "@roadiz/nuxt-module": "^2.1.4",
+    "defu": "^6.0.0",
     "ufo": "^0.8.5"
   },
   "devDependencies": {

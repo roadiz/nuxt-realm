@@ -16,6 +16,6 @@
             "@nuxtjs/auth-next"
         ]
     },
-    "files": ["src/module.ts", "src/plugin.ts", "src/RoadizRealm.ts"],
+    "files": ["src/module.ts", "src/plugin.ts", "src/RoadizRealm.ts", "src/auth-provider.ts"],
     "exclude": ["dist"]
 }
