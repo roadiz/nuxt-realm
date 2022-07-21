@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "outDir": "dist",
+        "lib": ["es2016", "dom"],
+        "skipLibCheck": true,
+        "types": [
+            "@nuxt/types",
+            "@roadiz/nuxt-module",
+            // https://auth.nuxtjs.org/guide/setup#using-with-typescript
+            "@nuxtjs/auth-next"
+        ]
+    },
+    "files": ["src/module.ts", "src/plugin.ts", "src/RoadizRealm.ts"],
+    "exclude": ["dist"]
+}
