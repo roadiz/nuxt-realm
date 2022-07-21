@@ -49,7 +49,7 @@ export function storePasswordByRealmID(realmID: string, password: string) {
 }
 
 export default function (context: Context) {
-    const { app, $roadiz, $auth } = context
+    const { app, $roadiz } = context
     // add password to request if available
     $roadiz.axios.interceptors.request.use((config) => {
         if (process.client) {
@@ -67,19 +67,13 @@ export default function (context: Context) {
                 if (password && typeof config.params?.password === 'undefined') {
                     config.params = { ...config.params, password }
                 }
-            } else if (isBearerScheme(realm) && $auth.loggedIn) {
-                const strategy = $auth.strategy as TokenableScheme
+            } else if (isBearerScheme(realm) && app.$auth?.loggedIn) {
+                const strategy = app.$auth?.strategy as TokenableScheme
 
                 config.headers[strategy.options.token.name] = strategy.token.get()
             }
         }
 
         return config
-    })
-
-    // nuxt auth + i18n
-    // @see https://stackoverflow.com/a/63341004
-    $auth.onRedirect((to) => {
-        return app.localePath(to)
     })
 }
