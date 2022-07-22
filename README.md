@@ -19,8 +19,32 @@ buildModules: [
 ### Bearer authentication
 
 This module use Nuxt auth module [https://auth.nuxtjs.org]() for bearer authentication.  
-Please refer to the module documentation for any question about it.  
-`$auth` is automatically injected by this module, and it'll be used for handling user authentication. 
+`$auth` is automatically injected by this module, and it'll be used for handling user authentication.  
+It must be installed and setup before using it.
+
+```bash
+yarn add --exact @nuxtjs/auth-next
+yarn add @nuxtjs/axios
+```
+
+```js
+// nuxt.config.js
+{
+    modules: [
+        '@nuxtjs/axios',
+        '@nuxtjs/auth-next'
+    ], 
+    auth: {
+        strategies: {
+            roadiz: {
+                provider: require.resolve('./node_modules/@roadiz/nuxt-realm/dist/auth-provider.js')
+            }
+        },
+        // i18n (optional)
+        plugins: [require.resolve('./node_modules/@roadiz/nuxt-realm/dist/auth-i18n.js')]
+    }
+}
+```
 
 ### The RoadizRealm component
 
