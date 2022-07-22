@@ -18,7 +18,7 @@ buildModules: [
 
 ### Bearer authentication
 
-This module use Nuxt auth module [https://auth.nuxtjs.org]() for bearer authentication.  
+This module use Nuxt auth module https://auth.nuxtjs.org for bearer authentication.  
 `$auth` is automatically injected by this module, and it'll be used for handling user authentication.  
 It must be installed and setup before using it.
 
