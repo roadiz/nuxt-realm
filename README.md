@@ -11,7 +11,7 @@ Add module in you `nuxt.config.js` file
 
 ```js
 // nuxt.config.js
-modules: [
+buildModules: [
     '@roadiz/nuxt-realm'
 ]
 ```
