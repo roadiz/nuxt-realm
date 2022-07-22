@@ -17,6 +17,6 @@ const realmModule: Module = function () {
     })
 }
 
-module.exports.meta = require('./package.json')
+module.exports.meta = require('../package.json')
 
 export default realmModule
