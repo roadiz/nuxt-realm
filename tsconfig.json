@@ -14,8 +14,8 @@
             "@roadiz/nuxt-module",
             // https://auth.nuxtjs.org/guide/setup#using-with-typescript
             "@nuxtjs/auth-next"
-        ]
+        ],
     },
-    "files": ["src/module.ts", "src/plugin.ts", "src/RoadizRealm.ts", "src/auth-provider.ts", "src/auth-i18n.ts"],
+    "files": ["src/module.ts", "src/plugin.ts", "src/auth-provider.ts", "src/auth-i18n.ts", "src/RoadizRealm.ts"],
     "exclude": ["dist"]
 }

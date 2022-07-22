@@ -50,7 +50,8 @@ export function storePasswordByRealmID(realmID: string, password: string) {
 
 export default function (context: Context) {
     const { app, $roadiz } = context
-    // add password to request if available
+
+    // add auth data to request if needed and available
     $roadiz.axios.interceptors.request.use((config) => {
         if (process.client) {
             const path = app.router?.currentRoute.path
