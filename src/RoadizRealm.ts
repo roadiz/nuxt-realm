@@ -50,6 +50,14 @@ export default Vue.extend({
         isPasswordScheme(): boolean {
             return !!this.realm && isPasswordScheme(this.realm)
         },
+        loggedIn(): boolean {
+            return !!this.$auth && this.$auth.loggedIn
+        },
+    },
+    watch: {
+        loggedIn() {
+            this.$nuxt.refresh()
+        },
     },
     mounted() {
         if (!this.realm) return
