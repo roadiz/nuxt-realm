@@ -1,6 +1,6 @@
 {
   "name": "@roadiz/nuxt-realm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Roadiz realm authentication with Nuxt",
   "main": "dist/module.js",
   "types": "dist/module.d.ts",
