@@ -37,7 +37,8 @@ yarn add @nuxtjs/axios
     auth: {
         strategies: {
             roadiz: {
-                provider: require.resolve('./node_modules/@roadiz/nuxt-realm/dist/auth-provider.js')
+                provider: require.resolve('./node_modules/@roadiz/nuxt-realm/dist/auth-provider.js'), 
+                baseURL: 'https://api.example.com' // optional
             }
         },
         // i18n (optional)
