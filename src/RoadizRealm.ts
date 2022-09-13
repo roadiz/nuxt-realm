@@ -25,10 +25,10 @@ export default Vue.extend({
         return {
             realm: this.realm,
             realmAuthWithPassword: this.authWithPassword,
-            realmHasPassword: () => this.hasPassword,
+            realmHasPassword: () => this.hasPassword, // use function to returns value for reactivity
             realmIsBearerScheme: this.isBearerScheme,
             realmIsPasswordScheme: this.isPasswordScheme,
-            realmIsAuthenticated: () => this.isAuthenticated,
+            realmIsAuthenticated: () => this.isAuthenticated, // use function to returns value for reactivity
         }
     },
     props: {

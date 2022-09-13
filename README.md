@@ -67,10 +67,11 @@ This component provides methods and properties for handling realm state.
 ```ts
 export interface RoadizRealmProvide {
     realm?: RoadizSecureRealm // active realm
-    realmAuthWithPassword(password: string): Promise<void> // authenticate with pasword
+    realmAuthWithPassword(password: string): Promise<void> // authenticate with password
     realmHasPassword(): boolean // is there already a filled password for this realm
     realmIsBearerScheme: boolean // bearer authentication scheme 
     realmIsPasswordScheme: boolean // plain password authentication scheme 
+    realmIsAuthenticated(): boolean // is the current realm already authenticated (with user for bearer scheme or password for password scheme) 
 }
 ```
 
