@@ -16,7 +16,7 @@ export interface RoadizRealmProvide {
     realmHasPassword(): boolean
     realmIsBearerScheme: boolean
     realmIsPasswordScheme: boolean
-    realmIsAuthenticated: boolean
+    realmIsAuthenticated(): boolean
 }
 
 export default Vue.extend({
@@ -28,7 +28,7 @@ export default Vue.extend({
             realmHasPassword: () => this.hasPassword,
             realmIsBearerScheme: this.isBearerScheme,
             realmIsPasswordScheme: this.isPasswordScheme,
-            realmIsAuthenticated: this.isAuthenticated,
+            realmIsAuthenticated: () => this.isAuthenticated,
         }
     },
     props: {
