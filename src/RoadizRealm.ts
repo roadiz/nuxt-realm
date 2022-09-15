@@ -125,6 +125,15 @@ export default Vue.extend({
         },
     },
     render(createElement): VNode {
-        return this.$slots.default?.[0] || createElement('')
+        const scopedSlot = this.$scopedSlots.default?.({
+            realm: this.realm,
+            isBearerScheme: this.isBearerScheme,
+            isPasswordScheme: this.isPasswordScheme,
+            loggedIn: this.loggedIn,
+            isAuthenticated: this.isAuthenticated,
+            hasPassword: this.hasPassword,
+        })?.[0]
+
+        return scopedSlot || createElement('')
     },
 })
