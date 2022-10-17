@@ -32,10 +32,7 @@ export default Vue.extend({
         }
     },
     props: {
-        response: {
-            type: Object as PropType<RoadizWebResponse>,
-            required: true,
-        },
+        response: Object as PropType<RoadizWebResponse>,
     },
     data() {
         return {
